@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "HAZ+ paywall-bypass",
+    "version": "1.0",
+    "description": "Bypasses the paywall of haz+ articles",
+    "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://www.haz.de/*",
+        "https://haz.de/*"
+      ]
+    }
+  ]
+}
