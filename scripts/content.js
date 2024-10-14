@@ -37,18 +37,28 @@ window.addEventListener("load", function () {
           return;
         }
         var textElement;
+        var spanElement = this.document.createElement('span');
         if (element.type === "text") {
           textElement = document.createElement("p");
         } else if (element.type === "header") {
-          textElement = document.createElement("h3");
+          textElement = document.createElement("h2");
         }
 
         if (textElement) {
-          textElement.classList.add('gqSIEH')
-          const textNode = document.createTextNode(element.text);
-          textElement.appendChild(textNode);
-          parentDiv.appendChild(textElement);
+          if (textElement.tagName === "P"){
+            textElement.classList.add('gqSIEH')
+            const textNode = document.createTextNode(element.text);
+            textElement.appendChild(textNode);
+            parentDiv.appendChild(textElement);
+          } else if(textElement.tagName === "H2") {
+            textElement.classList.add('Headlinestyled__Headline-sc-mamptc-0', 'head-line')
+            const textNode = document.createTextNode(element.text);
+            textElement.appendChild(spanElement).appendChild(textNode);
+            parentDiv.appendChild(textElement);
+          }
+          
         }
+        
       });
     } catch (error) {
       console.log(error);

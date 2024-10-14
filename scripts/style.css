@@ -1,0 +1,15 @@
+.head-line{
+    padding-bottom: 4px;
+    padding-top: 8px;
+    background-color: inherit;
+    color: var(--ldc-70);
+    font-family: "DIN Next LT Pro", Arial-adjusted-for-DIN, Roboto-adjusted-for-DIN, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.25px;
+    font-size: 22px;
+    line-height: 26px;
+    margin: 0px;
+    max-width: 100%;
+    overflow: hidden;
+    text-decoration: none;
+}
