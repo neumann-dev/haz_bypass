@@ -44,6 +44,7 @@ window.addEventListener("load", function () {
         }
 
         if (textElement) {
+          textElement.classList.add('gqSIEH')
           const textNode = document.createTextNode(element.text);
           textElement.appendChild(textNode);
           parentDiv.appendChild(textElement);
