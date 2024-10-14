@@ -49,7 +49,7 @@ window.addEventListener("load", function () {
           } else if(textElement.tagName === "H2") {
             textElement.classList.add('Headlinestyled__Headline-sc-mamptc-0', 'headline')
           }
-          const textNode = document.createTextNode(element.text);
+          const textNode = document.createTextNode(element.text.replace(/<[^>]*>/g, ''));
           textElement.appendChild(textNode);
           parentDiv.appendChild(textElement);
         }
